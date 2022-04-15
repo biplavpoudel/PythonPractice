@@ -1,4 +1,4 @@
-# Calculator App in Python
+# Calculator App using Python
 x,y = input("Enter two numbers: ").split()
 x = int(x)
 y = int(y)
