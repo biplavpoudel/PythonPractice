@@ -1,3 +1,4 @@
+# This is flag of Nepal
 i = 1
 count = 1
 while i <= 10:
