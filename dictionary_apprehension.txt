@@ -1,0 +1,11 @@
+firstname = "ram"
+lastname = "thapa"
+value = {"firstname":"ram", "lastname":"thapa"}
+
+student = {
+    "name":{
+        "firstname":"ram", "lastname":"thapa"}
+    }
+student1 = {"name" : value}
+
+print(student['name'])
