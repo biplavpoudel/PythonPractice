@@ -77,16 +77,10 @@ while (choice == "yes"):
     end_dt = datetime.datetime.strptime(end_time, '%H:%M:%S')
     
     # Writing score to a file named "leaderboard.txt"
-    file = open("leaderboard.txt","a")
-    file.write(str(start_time) +"   " + str(end_time) + "   " + str(end_dt-start_dt) + "  " + name + "   " + str(score) +" \n")
+    file = open("C:\Python Practice\Quiz\leaderboard.txt","a")
+    file.write(str(start_time) + "   " + str(end_time) + "   " + str(end_dt-start_dt) + "  " + name + "   " + str(score) + " \n")
     
     choice = input("Do you want to continue playing the quiz?: [yes/no] ")
     file.close()
 
-
-# Reading the leaderboard file
-file = open("leaderboard.txt","r")
-content = file.readlines()
-for line in content:
-    a = line.split()
     

@@ -34,7 +34,7 @@ for line in salesDict:
 
 customFile = open("custom.csv",'w')   #'x' gives 'file aready exists error' else create new file like 'w'
 # fields = ["Invoice_ID","Customer_Name","Product Name","Qty","Rate","Status","Total"]   
-fields = ["Customer_Name","Total"] 
+fields = ["Customer_Name","Status","Total"] 
 writer = csv.DictWriter(customFile,fieldnames=fields)
 writer.writeheader()
 
@@ -42,6 +42,8 @@ writer.writeheader()
 for line in name_filter:
     value = {
         'Customer_Name' : line['Customer_Name'],
+        'Status' : line['Status'],
         'Total' : line['Total']
     }
     writer.writerow(value)
+
