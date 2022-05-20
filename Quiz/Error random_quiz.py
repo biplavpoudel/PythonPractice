@@ -1,8 +1,16 @@
 # Randomized Quiz Game
 import random
 
-choice = input("Do you want to play the quiz: [yes/no] ")
-while (choice == "yes"):
+choice1 = input("Do you want to play the quiz: [yes/no] ")
+
+numbers = [i for i in range(1,6)]
+
+# To remove duplicates in randomization
+for i in range(1,6):
+    choice = random.choice(numbers)
+    numbers.remove(choice)
+
+while (choice1 == "yes"):
     # name = input("Enter your name: ")
 
     # Question Lists
@@ -37,24 +45,21 @@ while (choice == "yes"):
         "opt" : {"a":"83", "b":"45", "c":"None", "d":"37"}
     }]
 
-    queList = [1,2,3,4,5,6]
     right_answer = ["a","c","a","b","c","c"]
 
 
     # Asking the quiz to player
-    
-    i = random.randrange(1,6)
 
-    print(question_list[i]['que'])
-    print(question_list[i]['opt'])
+    print(question_list[choice]['que'])
+    print(question_list[choice]['opt'])
     answer = input("Choose any option [a/b/c/d]:")
     
-    if (answer == right_answer[i]):
+    if (answer == right_answer[choice]):
         print("You are correct.")
     else:
         print("You are wrong! ")
 
-    choice = input("Do you want to continue playing the quiz?: [yes/no] ")
+    choice1 = input("Do you want to continue playing the quiz?: [yes/no] ")
 
 
     
