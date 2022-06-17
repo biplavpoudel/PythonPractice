@@ -35,11 +35,18 @@ cursor.execute(empTable)
 # cursor.execute(insert)
 # db.commit()
 
-update ="""
-    update employee
-    set first_name = 'Kusume'
-    where id = 3;
-"""
+# update ="""
+#     update employee
+#     set first_name = 'Kusume'
+#     where id = 3;
+# """
 
-cursor.execute(update)
+# cursor.execute(update)
+# db.commit()
+
+delete ="""
+    DELETE from employee
+    WHERE id = 5;
+"""
+cursor.execute(delete)
 db.commit()

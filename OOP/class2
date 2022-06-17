@@ -1,0 +1,30 @@
+class Person():
+    def __init__(self,name,age,gender):
+        self.name = "Biplav"
+        self.age = 21
+        self.gender = "Male"
+
+class Student(Person):
+    def __init__(self, rollNo, semester, name, age, gender):
+        super().__init__(name, age, gender)
+        self.rollNo = rollNo
+        self.semester = semester
+
+class Teacher(Person):
+    def __init__(self, designation):
+
+        self.designation = designation
+
+# person = Person("Johnny",29,"Male")
+# print(person.name)
+# print(person.age)
+# print(person.gender)
+
+student = Student(10, "4th","Hari",21,"Male")
+print(student.name)
+print(student.age)
+print(student.rollNo)
+print(student.semester)
+print(student.gender)
+
+
